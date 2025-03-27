@@ -7,6 +7,10 @@ admin: jubaanedc
 psw: Gixam!23!23!23
 dns: oedc.gixam.com
 ssh command: ssh jubaanedc@oedc.gixam.com
+
+Server is backed-up in Azure under a backup service vault: "edc-backup"
+1. every day at 4:00 UTC
+2. retention for 30 days
 ~~~
 ## Postgres connection params
 ~~~
