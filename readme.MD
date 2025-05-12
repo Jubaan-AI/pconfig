@@ -33,7 +33,10 @@ certificates location:  /etc/letsencrypt/live/
 cd OpenEDC-Server
 sudo nano .env
 ~~~
-(TBD - needs to know if and how to restart the OED service)
+### restarting the OEDC server
+~~~
+docker compose down && docker compose up --build --detach
+~~~
 
 ## docker commands and info
 |command|what it does|
