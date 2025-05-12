@@ -28,6 +28,13 @@ ssl for: oedc.gixam.com, oedc-db.gixam.com
 certificates location:  /etc/letsencrypt/live/
 ~~~
 
+## OEDC server environment configuration
+~~~
+cd OpenEDC-Server
+sudo nano .env
+~~~
+(TBD - needs to know if and how to restart the OED service)
+
 ## docker commands and info
 |command|what it does|
 |-------|------------|

@@ -7,7 +7,7 @@ from email.mime.text import MIMEText
 import datetime
 
 class Mail:
-    def __init__(self, port=587, user='gixam@jubaan.ai', password='ItsG00dT0BeH0me', smtp='smtp.office365.com'):
+    def __init__(self, port=587, user='announcer@jubaan.com', password='Brok3nDr3ams!23', smtp='smtp.office365.com'):
         self.port = port
         self.user = user
         self.smtp = smtp
