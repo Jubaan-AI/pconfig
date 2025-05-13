@@ -13,7 +13,7 @@ class Mail:
         self.smtp = smtp
         self.password = password
 
-    def sendMail(self, subject: str = 'Gixam Test Session', to: str = '', message: str = ''):
+    def sendMail(self, subject: str = 'Gixam Test Session', to: str = '', message: str = '', fromm=None):
         try:
             context = ssl.create_default_context()
             server = smtplib.SMTP(self.smtp, self.port)
@@ -22,7 +22,7 @@ class Mail:
 
             msg = MIMEMultipart('alternative')
             msg['Subject'] = subject
-            msg['From'] = self.user
+            msg['From'] = 'Gixam Unit' if not fromm else fromm
             msg['To'] = to
 
             msg.attach(MIMEText(message, 'plain'))
@@ -32,7 +32,7 @@ class Mail:
         finally:
             server.quit()
 
-    def sendHTMLMail(self, subject: str = 'Gixam Test Session', to: str = '', message: str = '', attachments=None):
+    def sendHTMLMail(self, subject: str = 'Gixam Test Session', to: str = '', message: str = '', fromm=None, attachments=None):
         try:
             context = ssl.create_default_context()
             server = smtplib.SMTP(self.smtp, self.port)
@@ -40,7 +40,7 @@ class Mail:
             server.login(user=self.user, password=self.password)
 
             msgRoot = MIMEMultipart('related')
-            msgRoot['From'] = 'Gixam Unit'
+            msgRoot['From'] = 'Gixam Unit' if not fromm else fromm
             msgRoot['To'] = to
             msgRoot['Subject'] = subject
             msg = MIMEMultipart('alternative')
@@ -78,5 +78,5 @@ class Mail:
 if __name__ == "__main__":
     mail = Mail()
 
-    mail.sendMail("this is a test from the oedc server", "davidrainis@gmail.com", f"this is the body of the test, hello {datetime.datetime.now()}")
+    mail.sendMail("this is a test from the oedc server", "davidrainis@gmail.com", f"this is the body of the test, hello {datetime.datetime.now()}", fromm="from test")
     print("mail sent successfully")
