@@ -78,5 +78,5 @@ class Mail:
 if __name__ == "__main__":
     mail = Mail()
 
-    mail.sendMail("this is a test from the oedc server", "david@jubaan.com", f"this is the body of the test, hello {datetime.datetime.now()}")
-
+    mail.sendMail("this is a test from the oedc server", "davidrainis@gmail.com", f"this is the body of the test, hello {datetime.datetime.now()}")
+    print("mail sent successfully")
