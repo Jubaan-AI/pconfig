@@ -4,9 +4,10 @@
 This is Jubaan's EDC server, connection params:
 ~~~
 admin: jubaanedc
-psw: Gixam!23!23!23
+psw: Tuduxy@2O25
 dns: oedc.gixam.com
-ssh command: ssh jubaanedc@oedc.gixam.com
+port for ssh: 2225
+ssh command: ssh  -p 2225 jubaanedc@oedc.gixam.com
 
 Server is backed-up in Azure under a backup service vault: "edc-backup"
 1. every day at 4:00 UTC
@@ -19,7 +20,7 @@ postgres 16 (running on docekr "supabase-db")
     user = "postgres.your-tenant-id"
     password = "R3vyPCrVN0sMYdklJ2Rp13Y5"
     host = "localhost"
-    port = "5432"
+    port = "5461"
 ~~~
 ## NGINX configuration
 ~~~
