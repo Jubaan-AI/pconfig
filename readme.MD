@@ -13,6 +13,11 @@ Server is backed-up in Azure under a backup service vault: "edc-backup"
 1. every day at 4:00 UTC
 2. retention for 30 days
 ~~~
+
+## mail credentials
+user: gixaminfo@jubaan.com
+psw: ItsG00dT0BeH0me!23
+
 ## Postgres connection params
 ~~~
 postgres 16 (running on docekr "supabase-db")
