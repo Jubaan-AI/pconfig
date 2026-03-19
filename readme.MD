@@ -24,8 +24,12 @@ postgres 16 (running on docekr "supabase-db")
     dbname = "postgres"
     user = "postgres.your-tenant-id"
     password = "R3vyPCrVN0sMYdklJ2Rp13Y5"
+    Internal:
     host = "localhost"
     port = "5461"
+    External:
+    host = "oedc.gixam.com"
+    port = 5432
 ~~~
 ## NGINX configuration
 ~~~
